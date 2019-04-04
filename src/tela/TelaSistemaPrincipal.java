@@ -29,6 +29,8 @@ public class TelaSistemaPrincipal extends JFrame implements ActionListener {
     public JMenuItem jmiCompras = new JMenuItem("Entrada de Produtos");
     public JMenuItem jmiVendas = new JMenuItem("Saida de Produtos");
 
+    public JMenuItem jmiBalanco = new JMenuItem("Balanço");
+
     public TelaSistemaPrincipal() {
         //----------tela do sistema ----------//
         getContentPane().add(jdp);
@@ -51,13 +53,22 @@ public class TelaSistemaPrincipal extends JFrame implements ActionListener {
 
         //adicionar dentro do menu movimentos
         jmMovimentos.add(jmiProdutoCadas);
-        jmiProdutoCadas.add(jmiCompras);
-        jmiProdutoCadas.add(jmiVendas);
+        jmMovimentos.add(jmiCompras);
+        jmMovimentos.add(jmiVendas);
+
+        //adicionar dentro do menu relatórios
+        jmRelatorios.add(jmiBalanco);
 
         // direcionar cada menu
         jmiEstado.addActionListener(this);
         jmiCidade.addActionListener(this);
         jmiFornecedor.addActionListener(this);
+
+        jmiProdutoCadas.addActionListener(this);
+        jmiCompras.addActionListener(this);
+        jmiVendas.addActionListener(this);
+
+        jmiBalanco.addActionListener(this);
 
         setVisible(true);
     }
@@ -76,6 +87,9 @@ public class TelaSistemaPrincipal extends JFrame implements ActionListener {
             TelaDeCadastroFornecedor telaDeCadastroFornecedor = new TelaDeCadastroFornecedor();
             jdp.add(telaDeCadastroFornecedor);
 
+        } else if (ae.getSource() == jmiProdutoCadas) {
+            TelaDeCadastroProdutos telaDeCadastroProdutos = new TelaDeCadastroProdutos();
+            jdp.add(telaDeCadastroProdutos);
         }
 
     }
