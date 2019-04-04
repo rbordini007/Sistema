@@ -1,4 +1,3 @@
-
 package sistema;
 
 import tela.TelaSistemaPrincipal;
@@ -8,10 +7,10 @@ import tela.TelaSistemaPrincipal;
  * @author rbord
  */
 public class Sistema {
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         new TelaSistemaPrincipal();
-    
+
     }
-    
+
 }

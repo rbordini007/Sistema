@@ -79,6 +79,7 @@ public class TelaSistemaPrincipal extends JFrame implements ActionListener {
         if (ae.getSource() == jmiEstado) {
             TelaDeCadastroEstado telaDeCadastroEstado = new TelaDeCadastroEstado();
             jdp.add(telaDeCadastroEstado);
+
         } else if (ae.getSource() == jmiCidade) {
             TelaDeCadastroCidade telaDeCadastroCidade = new TelaDeCadastroCidade();
             jdp.add(telaDeCadastroCidade);
@@ -90,6 +91,14 @@ public class TelaSistemaPrincipal extends JFrame implements ActionListener {
         } else if (ae.getSource() == jmiProdutoCadas) {
             TelaDeCadastroProdutos telaDeCadastroProdutos = new TelaDeCadastroProdutos();
             jdp.add(telaDeCadastroProdutos);
+
+        } else if (ae.getSource() == jmiCompras) {
+            TelaDeCompras telaDeCompras = new TelaDeCompras();
+            jdp.add(telaDeCompras);
+
+        } else if (ae.getSource() == jmiVendas) {
+            TelaDeVendas telaDeVendas = new TelaDeVendas();
+            jdp.add(telaDeVendas);
         }
 
     }
